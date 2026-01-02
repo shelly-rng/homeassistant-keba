@@ -4,8 +4,8 @@ from collections.abc import Callable, Coroutine
 from dataclasses import dataclass
 from typing import Any
 
-from keba_kecontact.charging_station import ChargingStation
-from keba_kecontact.connection import KebaKeContact
+from .keba_kecontact.charging_station import ChargingStation
+from .keba_kecontact.connection import KebaKeContact
 
 from homeassistant.components.button import ButtonEntity, ButtonEntityDescription
 from homeassistant.config_entries import ConfigEntry

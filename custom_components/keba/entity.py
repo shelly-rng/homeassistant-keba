@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from keba_kecontact.charging_station import ChargingStation
+from .keba_kecontact.charging_station import ChargingStation
 
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity import Entity, EntityDescription
@@ -27,7 +27,8 @@ class KebaBaseEntity(Entity):
 
         cs_info = self._charging_station.device_info
 
-        self._attr_name = f"{description.name}"
+         # REMOVED:  self._attr_name = f"{description.name}"
+        self.entity_description = description
         self._attr_unique_id = f"{DOMAIN}-{cs_info.device_id}-{description.key}"
 
         self._attr_device_info = DeviceInfo(

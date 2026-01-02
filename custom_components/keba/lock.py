@@ -2,8 +2,8 @@
 
 from typing import Any
 
-from keba_kecontact.charging_station import ChargingStation
-from keba_kecontact.connection import KebaKeContact
+from .keba_kecontact.charging_station import ChargingStation
+from .keba_kecontact.connection import KebaKeContact
 
 from homeassistant.components.lock import LockEntity, LockEntityDescription
 from homeassistant.config_entries import ConfigEntry

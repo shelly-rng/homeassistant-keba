@@ -3,8 +3,8 @@
 from collections.abc import Mapping
 from typing import Any
 
-from keba_kecontact.charging_station import ChargingStation
-from keba_kecontact.connection import KebaKeContact
+from .keba_kecontact.charging_station import ChargingStation
+from .keba_kecontact.connection import KebaKeContact
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -38,6 +38,7 @@ SENSOR_TYPES = [
         native_unit_of_measurement=UnitOfPower.KILO_WATT,
         device_class=SensorDeviceClass.POWER,
         state_class=SensorStateClass.MEASUREMENT,
+        suggested_display_precision=3,
     ),
     SensorEntityDescription(
         key="Curr user",
@@ -50,12 +51,14 @@ SENSOR_TYPES = [
         name="Energy target",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
+        suggested_display_precision=3,
     ),
     SensorEntityDescription(
         key="E pres",  # codespell:ignore pres
         name="Session energy",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
+        suggested_display_precision=3,
     ),
     SensorEntityDescription(
         key="E total",
@@ -63,6 +66,7 @@ SENSOR_TYPES = [
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
+        suggested_display_precision=3,
     ),
     # optional
     SensorEntityDescription(
@@ -217,6 +221,7 @@ SENSOR_TYPES = [
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         entity_category=EntityCategory.DIAGNOSTIC,
+        suggested_display_precision=3,
     ),
     SensorEntityDescription(
         key="started",

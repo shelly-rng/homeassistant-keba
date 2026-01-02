@@ -6,7 +6,7 @@ from ipaddress import ip_network
 import logging
 from typing import Any
 
-from keba_kecontact.connection import SetupError
+from .keba_kecontact.connection import SetupError
 import voluptuous as vol
 
 from homeassistant import core, exceptions

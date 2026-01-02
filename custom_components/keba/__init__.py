@@ -2,9 +2,9 @@
 
 import logging
 
-from keba_kecontact import create_keba_connection
-from keba_kecontact.charging_station import ChargingStation, KebaService
-from keba_kecontact.connection import KebaKeContact, SetupError
+from .keba_kecontact import create_keba_connection
+from .keba_kecontact.charging_station import ChargingStation, KebaService
+from .keba_kecontact.connection import KebaKeContact, SetupError
 import voluptuous as vol
 
 from homeassistant.config_entries import SOURCE_IMPORT, ConfigEntry

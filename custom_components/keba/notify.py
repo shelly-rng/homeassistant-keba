@@ -1,6 +1,6 @@
 """Support for Keba notifications."""
 
-from keba_kecontact.charging_station import ChargingStation
+from .keba_kecontact.charging_station import ChargingStation
 
 from homeassistant.components.notify import NotifyEntity, NotifyEntityDescription
 from homeassistant.config_entries import ConfigEntry
