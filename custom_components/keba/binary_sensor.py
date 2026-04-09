@@ -34,7 +34,7 @@ SENSOR_TYPES = [
     BinarySensorEntityDescription(
         key="State_on",
         name="Charging",
-        device_class=BinarySensorDeviceClass.POWER,
+        device_class=BinarySensorDeviceClass.BATTERY_CHARGING,
     ),
     BinarySensorEntityDescription(
         key="Enable user",
