@@ -151,7 +151,7 @@ class ChargingStation:
                     2: "ready for charging",
                     3: "charging",
                     4: "error",
-                    5: "authorization rejected",
+                    5: "charging interrupted",
                 }
                 json_rcv[ReportField.STATE_DETAILS] = switcher.get(state, "State undefined")
 
