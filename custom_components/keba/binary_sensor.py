@@ -124,3 +124,7 @@ class KebaBinarySensor(KebaBaseEntity, BinarySensorEntity):
             self._attributes["fallback_current"] = str(
                 self._charging_station.get_value("Curr FS")
             )
+
+        # Invert Plug_locked
+        if key == "Plug_locked":
+            self._attr_is_on = not self._attr_is_on
