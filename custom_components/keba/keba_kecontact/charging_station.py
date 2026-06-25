@@ -391,7 +391,7 @@ class ChargingStation:
             validate_rfid_class(rfid_class)
             cmd = f"start {rfid} {rfid_class}"
 
-        await self.set_ena(True)
+        # await self.set_ena(True)
         await self._send(cmd, fast_polling=True, blocking_time_s=1)
 
     async def stop(self, rfid: str | None = None) -> None:
