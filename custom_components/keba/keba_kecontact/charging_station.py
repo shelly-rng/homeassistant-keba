@@ -106,7 +106,6 @@ class ChargingStation:
 
         # Correct thousands
         thousands = json_rcv.keys() & [
-            ReportField.MAX_CURR_PERCENT,
             ReportField.MAX_CURR,
             ReportField.CURR_HW,
             ReportField.CURR_USER,
